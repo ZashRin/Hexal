@@ -1,0 +1,522 @@
+@font-face {
+    font-family: 'MavenProRegular';
+    src: url('../fonts/MavenPro-Regular.ttf');
+}
+@font-face {
+    font-family: 'MavenProBlack';
+    src: url('../fonts/MavenPro-Black.ttf');
+}
+@font-face {
+    font-family: 'MavenProBold';
+    src: url('../fonts/MavenPro-Bold.ttf');
+}
+@font-face {
+    font-family: 'MavenProMedium';
+    src: url('../fonts/MavenPro-Medium.ttf');
+}
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('../fonts/MyriadPro-Regular.ttf');
+}
+@font-face {
+    font-family: 'LatoRegular';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+@font-face {
+    font-family: 'LatoBold';
+    src: url('../fonts/Lato-Bold.ttf');
+}
+@font-face {
+    font-family: 'LatoBlack';
+    src: url('../fonts/Lato-Black.ttf');
+}
+
+body {
+    background-color: #ffffff;
+    width: 1020px;
+    height: 1509px;
+    margin: 0;
+}
+
+header {
+    background-color: #323232;
+    height: 4.175%;
+}
+
+.navigation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.visuallyhidden {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+.crop {
+	position: relative;
+	width: 182px;
+	height: 209px;
+	border: none;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.crop img {
+	margin: 0;
+	position: absolute;
+	top: -180px;
+	left: 0px;
+    clip: rect(120px 135px 209px 43px);
+}
+
+.navigation ul {
+    position: absolute;
+    margin: 0 301px;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    z-index: 10;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: justify;
+    color: #ffffff;
+    padding: 14px 5px 14px 16px;
+    margin: 17px -3px 17px 9px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 7pt;
+    font-family: 'LatoBold', 'MyriadProRegular';
+}
+
+li a:hover:not(.active) {
+    color: rgba(46, 179, 152, 255);
+}
+
+li .logo {
+    padding: 0px 14px;
+    margin: 10px 0px 10px 23px;
+}
+
+.hexagon-cont {
+    position: relative;
+    padding-top: 89px;
+    height: 632px;
+}
+
+.hexagon-cont .hor-line, .hexagon-cont .hor-line-bot {
+    position: absolute;
+    top: 1.5%;
+    border: 1px solid;
+    margin-left: 3%;
+    width: 94.1%;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+    border-color: #e4e9eb;
+    z-index: 1;
+}
+
+.hexagon-cont .hor-line-bot {
+    top: 98.2%;
+    margin-top: 1px;
+}
+
+.hexagon-cont .hor-line2 {
+    position: absolute;
+    top: 1.5%;
+    border: 1px solid;
+    margin-left: 43.1%;
+    width: 13.8%;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: transparent;
+    border-color: #ffffff;
+    z-index: 2;
+}
+
+.hexagon-cont .vert-line {
+    position: absolute;
+    top: 24.5%;
+    border: 1px solid;
+    margin-left: -2.5%;
+    width: 103%;
+    height: 49%;
+    border-bottom: transparent;
+    border-top: transparent;
+    border-color: #e4e9eb;
+}
+
+.hexagon-line1 {
+    position: absolute;
+    top: 89px;
+    margin-left: 119px;
+}
+
+.hexagon-line2 {
+    position: absolute;
+    top: 257px;
+    margin-left: 19px;
+}
+
+.hexagon-line3 {
+    position: absolute;
+    top: 425px;
+    margin-left: 119px;
+}
+
+.hexagon {
+    width: 182px;
+    height: 209px;
+    margin-right: 14px;
+    transform: rotate(120deg);
+    overflow: hidden;
+    display: inline-block;
+}
+
+.hex-layer1 {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+    overflow: hidden;
+}
+
+.hex-layer2 {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+    overflow: hidden;
+}
+
+.hex-slider {
+    position: absolute;
+    bottom: 23px;
+    left: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-self: start;
+}
+
+.slider-item {
+    height: 6px;
+    width: 6px;
+    margin-left: 3px;
+    background-color: #ddd2c5;
+}
+
+.slider-item.active,
+.slider-item:hover {
+    background-color: #8b8784;
+}
+
+.hexagon1 {
+	width: 182px;
+	height: 209px;
+	background: transparent;
+    position: relative;
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.hexagon1:before {
+	content: "";
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 0;
+	height: 0;
+    border-left: 91px solid  #2eb398;
+	border-right: 91px solid  #2eb398;
+	border-bottom: 52px solid transparent;
+}
+
+.hexagon1:after {
+	content: "";
+	position: absolute;
+	bottom: 0; 
+	left: 0;
+	width: 0;
+	height: 0;
+    border-left: 91px solid  #2eb398;
+	border-right: 91px solid  #2eb398;
+	border-top: 52px solid transparent;
+}
+
+.info {
+    background-color: #2eb398;
+    height: 341px;
+    position: relative;
+}
+
+.info .vert-line {
+    position: absolute;
+    top: 3.7%;
+    border: 1px solid;
+    margin-left: 9.7%;
+    width: 80.4%;
+    height: 93%;
+    border-bottom: transparent;
+    border-top: transparent;
+    border-color: #219d84;
+}
+
+.info .hexagon1 {
+    top: 68px;
+    left: 122px;
+    width: 180px;
+    height: 206px;
+    background-image: url("../images/Photo@1X.png");
+    background-position: 50%;
+}
+
+.about {
+    width: 60%;
+    margin-left: 31%;
+    margin-top: -14.2%;
+}
+
+.name {
+    margin: 0;
+    font-size: 22pt;
+    color: rgba(215, 252, 245, 255);
+    text-align: justify;
+    font-family: 'MavenProRegular', 'MyriadProRegular';
+}
+
+.profession {
+    margin: 2px;
+    font-size: 14pt;
+    color: rgba(32, 129, 109, 255);
+    text-align: justify;
+    font-family: 'MavenProRegular', 'MyriadProRegular';
+}
+
+.about-me {
+    max-width: 95%;
+    line-height: 15pt;
+    margin: 16px 3px;
+    font-size: 9pt;
+    color: rgba(215, 252, 245, 255);
+    text-align: justify;
+    font-family: 'LatoRegular', 'MyriadProRegular';
+}
+
+.social {
+    position: absolute;
+    top: 73.3%;
+    left: 73.8%;
+    display: flex;
+}
+.social a:nth-child(odd) {
+    width: 25px;
+}
+.social a:nth-child(even) {
+    width: 24px;
+}
+.social a {
+    height: 24px;
+}
+
+.fb {
+    background-image: url('../images/social-icons/facebook.png');
+}
+.fb:hover:not(.active) {
+    background-image: url('../images/social-icons/Facebook@1X.png');
+}
+.tw {
+    background-image: url('../images/social-icons/twitter.png');
+}
+.tw:hover:not(.active) {
+    background-image: url('../images/social-icons/Twitter@1X.png');
+}
+.g {
+    background-image: url('../images/social-icons/google.png');
+}
+.g:hover:not(.active) {
+    background-image: url('../images/social-icons/Google@1X.png');
+}
+.pin {
+    background-image: url('../images/social-icons/pinterest.png');
+}
+.pin:hover:not(.active) {
+    background-image: url('../images/social-icons/Pinterest@1X.png');
+}
+.lin {
+    background-image: url('../images/social-icons/linkedin.png');
+}
+.lin:hover:not(.active) {
+    background-image: url('../images/social-icons/Linkedin@1X.png');
+}
+.drib {
+    background-image: url('../images/social-icons/dribble.png');
+}
+.drib:hover:not(.active) {
+    background-image: url('../images/social-icons/Dribbble@1X.png');
+}
+
+footer {
+    position: relative;
+    background-color: #323232;
+    padding-bottom: 14%;
+}
+
+footer .hor-line1, .hor-line2 {
+    position: absolute;
+    top: 2.3%;
+    border: 1px solid;
+    margin-left: 3%;
+    width: 94.1%;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+    border-color: #2b2b2b;
+}
+
+footer .hor-line2 {
+    top: 97.7%;
+    margin-top: 1px;
+}
+
+.get-in-touch {
+    padding-top: 7.2%;
+    padding-bottom: 10.1%;
+    margin-left: 11.75%;
+    width: 56.9%;
+}
+
+.get-in-touch h2 {
+    margin: 0;
+    margin-top: -10px;
+    font-family: 'MavenProRegular', 'MyriadProRegular';
+    font-size: 22pt;
+    color: rgba(224, 224, 224, 255);
+    text-align: justify;
+}
+
+.get-in-touch p {
+    margin: 5px 2px;
+    font-family: 'MavenProRegular', 'MyriadProRegular';
+    font-size: 12pt;
+    color: rgba(224, 224, 224, 255);
+    text-align: justify;
+}
+
+.touch-form {
+    width: 100%;
+    margin-top: 3.6%;
+}
+
+.touch-form input, textarea {
+    width: 100%;
+    border: none;
+    padding: 0;
+    background-color: #454545;
+    text-indent: 2.7%;
+    font-family: 'LatoRegular', 'MyriadProRegular';
+    font-size: 8pt;
+    color: rgba(190, 190, 190, 255);
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+.touch-form .send {
+    margin-top: 1px;
+    float: right;
+    width: 90px;
+    height: 37px;
+    background-color: #2eb398;
+    font-family: 'LatoRegular', 'MyriadProRegular';
+    font-size: 8pt;
+    color: rgba(215, 252, 245, 255);
+    text-align: center;
+    padding-right: 3px;
+    padding-bottom: 1.5px;
+}
+
+.touch-form .send:hover:not(.active) {
+    color: #000000;
+}
+
+.touch-form input {
+    height: 38px;
+}
+
+.touch-form textarea {
+    height: 141px;
+    margin-bottom: 12px;
+    padding-top: 9px;
+    resize: none;
+}
+
+.inform {
+    position: absolute;
+    left: 70.5%;
+    top: 22.7%;
+    width: 18%;
+    line-height: 16pt;
+    font-family: 'LatoRegular', 'MyriadProRegular';
+    font-size: 9pt;
+    color: rgba(224, 224, 224, 255);
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.contacts {
+    position: absolute;
+    left: 70.6%;
+    top: 52%;
+    width: 12%;
+}
+
+.contacts a {
+    text-decoration: none;
+    line-height: 15pt;
+    font-family: 'LatoRegular', 'MyriadProRegular';
+    font-size: 8pt;
+    color: rgba(190, 190, 190, 255);
+    text-align: justify;
+    white-space: pre;
+}
+
+a i {
+   color: #2eb398;
+}
+
+.hex-layer2.last {
+    background-color: #323232;
+    background-image: url("../images/Layer\ 14@1X.png");
+    background-position: -19px -17px;
+    background-repeat: no-repeat;
+}
+
+.foot {
+    position: absolute;
+    width: 100%;
+    height: 7.65%;
+    top: 100%;
+    background-color: #222222;
+}
+
+.foot p {
+    font-family: 'MavenProRegular', 'MyriadProRegular';
+    font-size: 8.65655pt;
+    color: rgba(69, 69, 69, 255);
+    text-align: justify;
+    margin-left: 4%;
+    margin-top: 1.6%;
+}
